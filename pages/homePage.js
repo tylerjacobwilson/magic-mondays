@@ -4,11 +4,13 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="w-screen h-screen bg-green-200 text-emerald-950">
-      Hello World Magic Mondays Index
+    <div className="w-screen h-screen bg-black text-white">
       <div>
-        <div className="bg-green-200 text-emerald-950">
-          <h1>Welcome to Magic Mondays</h1>
+        <div className="bg-black text-white ">
+          <h1 style={{ fontSize: "26px" }}>
+            Welcome to Magic Mondays! The best place on the web to manage your
+            play group.
+          </h1>
           <Link href="/contact">
             <div>Contact</div>
           </Link>
@@ -29,6 +31,8 @@ export default function HomePage() {
             </ul>
           </nav>
         </div>
+        <br />
+
         <h1>Sign In</h1>
         <form action="#" method="post">
           <label for="username">Username:</label>

@@ -9,7 +9,7 @@ const UserPage = () => {
     const fetchCard = async () => {
       try {
         const response = await axios.get(
-          "https://api.magicthegathering.io/v1/cards/random"
+          "https://api.magicthegathering.io/v1/cards/386616"
         );
         setCard(response.data.card);
       } catch (error) {
