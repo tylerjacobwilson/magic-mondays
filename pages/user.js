@@ -9,8 +9,15 @@ const UserPage = () => {
   useEffect(() => {
     const fetchCard = async () => {
       try {
+<<<<<<< Updated upstream
         const response = await axios.get(`${process.env.NEXT_PUBLIC_MAGIC_API_URL}/v1/cards/386616`)
         setCard(response.data.card)
+=======
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_MAGIC_API_URL}/v1/cards/386615`
+        );
+        setCard(response.data.card);
+>>>>>>> Stashed changes
       } catch (error) {
         console.error("Error fetching card:", error)
       }
