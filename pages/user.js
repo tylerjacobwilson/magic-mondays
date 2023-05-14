@@ -4,6 +4,7 @@ import Card from "../components/Card"
 
 const UserPage = () => {
   const [card, setCard] = useState(null)
+  console.log("hit")
 
   useEffect(() => {
     const fetchCard = async () => {
