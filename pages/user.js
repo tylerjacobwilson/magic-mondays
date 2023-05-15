@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from "react"
-import axios from "axios"
-import Card from "../components/Card"
+import Image from "next/image"
 
-const UserPage = () => {
-  const [card, setCard] = useState(null)
-  console.log("hit")
+const defaultEndpoint = "https://api.magicthegathering.io/v1/cards/386616"
 
-  useEffect(() => {
-    const fetchCard = async () => {
-      try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_MAGIC_API_URL}/v1/cards/386616`)
-        setCard(response.data.card)
-      } catch (error) {
-        console.error("Error fetching card:", error)
-      }
-    }
+export async function getStaticProps() {
+  const res = await fetch(defaultEndpoint)
+  const data = await res.json()
+  return {
+    props: {
+      data,
+    },
+  }
+}
 
-    fetchCard()
-  }, [])
+const UserPage = ({ data }) => {
+  console.log("data:", data)
+
+  console.log("artist", data.card.artist)
+  console.log("name", data.card.name)
+  console.log("imageUrl", data.card.imageUrl)
 
   return (
     <div className='container mx-auto px-4'>
-      <h1 className='text-3xl font-bold mb-4'>Random Magic Card</h1>
-      {card ? <Card card={card} /> : <p>Loading...</p>}
+      <div className='h-auto w-56 flex flex-col items-center'>
+        <h1 className='text-md font-bold mb-0.5 pt-2'>{data.card.name}</h1>
+        <img src={data.card.imageUrl} alt={data.card.name || ""} />
+      </div>
     </div>
   )
 }
