@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react"
-import Image from "next/image"
+import React from "react"
 
 const defaultEndpoint = "https://api.magicthegathering.io/v1/cards/386616"
 
