@@ -1,12 +1,16 @@
-import "@/styles/globals.css";
-import NavBar from "@/components/NavBar";
+import "@/styles/globals.css"
+import NavBar from "@/components/NavBar"
+import { useState, createContext } from "react"
+import AppContext from "@/components/Context/AppContext"
 
 export default function App({ Component, pageProps }) {
+  const [cardNameContext, setCardNameContext] = useState("Bandage")
   return (
-    <div>
-      <NavBar />
-      
-      <Component {...pageProps} />
-    </div>
-  );
+    <>
+      <AppContext.Provider value={{ cardNameContext, setCardNameContext }}>
+        <NavBar />
+        <Component {...pageProps} />
+      </AppContext.Provider>
+    </>
+  )
 }
