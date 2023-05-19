@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Switch } from "@headlessui/react"
+import ResetIcon from "@/components/Icons/reset"
 
 const UserPage = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
@@ -49,6 +50,12 @@ const UserPage = () => {
     event.preventDefault()
     setIsFormSubmitted(true)
     setSearchInput(input)
+  }
+
+  const handleReset = (e) => {
+    e.preventDefault()
+    setSearchInput("")
+    setInput("")
   }
 
   if (!data) {
@@ -158,10 +165,17 @@ const UserPage = () => {
 
             <button
               type='submit'
-              className='px-1.5 py-0.5 bg-orange-700 rounded-md ml-1.5'
+              className='pt-0.5 pb-1 px-1.5 bg-orange-700 rounded-md ml-2'
               disabled={!data || data.length === 0}
             >
               Submit
+            </button>
+            <button
+              onClick={handleReset}
+              className='pt-0.5 pb-1 px-1.5 bg-green-600 rounded-full ml-1.5'
+              disabled={!data || data.length === 0}
+            >
+              <ResetIcon title='reset' />
             </button>
           </div>
         </form>
