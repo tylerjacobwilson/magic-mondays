@@ -32,21 +32,11 @@ export default function HomePage() {
 
           <form action="#" method="post">
             <label htmlFor="username">Username: </label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              class="text-black"
-            />
+            <input type="text" id="username" name="username" />
             <br />
             <br />
             <label htmlFor="password">Password: </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="text-black"
-            />
+            <input type="password" id="password" name="password" />
             <br />
             <br />
 

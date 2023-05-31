@@ -28,11 +28,14 @@ export default function NavBar() {
         <Link href="/">
           <div className="hover:text-red-500">Home</div>
         </Link>
-        <Link href="/user">
-          <div className="hover:text-red-500">User</div>
+        <Link href="/aboutUs">
+          <div className="hover:text-blue-500">About Us</div>
         </Link>
-        <Link href="/about">
-          <div className="hover:text-red-500">About</div>
+        <Link href="/contact">
+          <div className="hover:text-green-500">Contact</div>
+        </Link>
+        <Link href="/user">
+          <div className="hover:text-red-500">Players</div>
         </Link>
       </div>
     </div>
