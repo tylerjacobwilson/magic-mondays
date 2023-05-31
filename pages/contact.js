@@ -34,6 +34,10 @@ export default function Contact() {
           +
         </button>
       </div>
+
+      <div className="text-sm sm:text-xl lg:text-2xl">
+        Contact Me @: tylerjacobwilson@gmail.com
+      </div>
     </div>
   );
 }

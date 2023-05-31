@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Minotaur from "../public/Images/Minotaur_05.png";
+import Viking from "../public/Images/VikingLord.png";
 
 export default function HomePage() {
   const [username, setUsername] = useState("");
@@ -20,7 +20,11 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full h-screen bg-black text-white">
       <div className="flex justify-center px-10 ">
-        <h1 className="text-white-300 max-w-xl pt-10 text-3xl mb-10">
+        <h1
+          className="text-white-300 max-w-xl pt-10 text-sm 
+        sm:text-3xl lg:text-4xl
+        xl:text-5xl mb-10"
+        >
           Welcome to Magic Mondays! The best place to manage you play group.
           Sign up, Select Decks, Make Games, Check Stats
         </h1>
@@ -67,12 +71,15 @@ export default function HomePage() {
         )}
         <p>
           Don't have an account?{" "}
-          <a className="text-red-600 text-3xl  w-screen mb-10" href="signUp">
+          <a
+            className="text-red-600 text-base xl:text-3xl  w-screen mb-10"
+            href="signUp"
+          >
             Create one
           </a>
         </p>
 
-        <Image className="pt-8 " src={Minotaur} height={500} />
+        <Image className="pt-8 " src={Viking} height={500} />
       </div>
     </div>
   );

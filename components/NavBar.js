@@ -9,12 +9,12 @@ export default function NavBar() {
       <div className="relative">
         <Image
           src={MagicBanner}
-          className="w-screen h-60 object-cover border-4 border-black"
+          className="w-screen h-60 object-cover border-2 border-black"
           alt="Magic cards laid out"
         />
 
         <h1
-          className="absolute inset-0 flex items-center justify-center text-6xl sm:text-7xl xl:text-9xl text-red-500 text-center"
+          className="absolute inset-0 flex items-center justify-center text-7xl sm:text-8xl lg:text-9xl xl:text-10xl text-red-500 text-center font-serif"
           style={{
             textShadow:
               "-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000",
@@ -24,7 +24,10 @@ export default function NavBar() {
         </h1>
       </div>
 
-      <div className="h-10 flex flex-row justify-center items-center gap-8 w-full bg-white text-black text-xl xs:text-3xl sm:text-4xl">
+      <div
+        className="h-10 flex flex-row justify-center items-center gap-8 w-full bg-white text-black 
+       text-sm sm:text-2xl lg:text-3xl xl:text-4xl pb-2"
+      >
         <Link href="/">
           <div className="hover:text-red-500">Home</div>
         </Link>
