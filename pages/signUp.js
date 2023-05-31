@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Wizard from "../public/Images/Wizard.png";
 
 export default function signUp() {
   const [username, setUsername] = useState("");
@@ -25,7 +26,7 @@ export default function signUp() {
       zipCode,
       password,
     };
-    console.log(formData); // You can replace this with your desired display logic
+    // You can replace this with your desired display logic
 
     setSubmitted(true); // Set submitted to true
   };
@@ -33,7 +34,7 @@ export default function signUp() {
   return (
     <div className="flex flex-col items-center">
       <br />
-      <h1 className="text-2xl font-bold mb-4">Sign Up</h1>
+      <h1 className="text-5xl xl:text-5xl font-bold mb-4">Sign Up:</h1>
 
       <form className="flex flex-col" onSubmit={handleSubmit}>
         <label htmlFor="username" className="mb-2">
@@ -131,6 +132,10 @@ export default function signUp() {
           Password: {password}
         </p>
       )}
+
+      <div>
+        <Image className="pt-8 " src={Wizard} height={500} />
+      </div>
     </div>
   );
 }

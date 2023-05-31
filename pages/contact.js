@@ -16,22 +16,27 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-row justify-center items-center pt-10">
+      <h1 className="pt-10 text-5xl">Customers Served</h1>
+      <div className="flex flex-row justify-center items-center pt-4">
         <button
-          className="p-3 mr-2 text-5xl border-red-600 rounded-md border-2 bg-red-500"
-          onClick={increment}
+          className="h-20 w-20 pb-7 mr-2 text-9xl border-red-600 rounded-md border-2 bg-red-500 flex items-center justify-center"
+          onClick={decrement}
         >
-          Add
+          -
         </button>
         <div className="p-3 mx-2 text-5xl text-lime-950 border-red-600 rounded-md border-2 bg-lime-200">
           {count}
         </div>
         <button
-          className="p-3 ml-2 text-5xl border-red-600 rounded-md border-2 bg-cyan-500"
-          onClick={decrement}
+          className="h-20 w-20 pb-5 mr-2 text-8xl border-red-600 rounded-md border-2 bg-cyan-500 flex items-center justify-center"
+          onClick={increment}
         >
-          Subtract
+          +
         </button>
+      </div>
+
+      <div className="text-sm sm:text-xl lg:text-2xl">
+        Contact Me @: tylerjacobwilson@gmail.com
       </div>
     </div>
   );
