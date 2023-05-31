@@ -25,7 +25,7 @@ export default function signUp() {
       zipCode,
       password,
     };
-    console.log(formData); // You can replace this with your desired display logic
+    // You can replace this with your desired display logic
 
     setSubmitted(true); // Set submitted to true
   };

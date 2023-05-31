@@ -14,7 +14,7 @@ export default function NavBar() {
         />
 
         <h1
-          className="absolute inset-0 flex items-center justify-center text-9xl text-red-500 text-center"
+          className="absolute inset-0 flex items-center justify-center text-6xl sm:text-7xl xl:text-9xl text-red-500 text-center"
           style={{
             textShadow:
               "-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000",
@@ -24,7 +24,7 @@ export default function NavBar() {
         </h1>
       </div>
 
-      <div className="h-10 flex flex-row justify-center items-center gap-8 w-full bg-white text-black text-3xl">
+      <div className="h-10 flex flex-row justify-center items-center gap-8 w-full bg-white text-black text-xl xs:text-3xl sm:text-4xl">
         <Link href="/">
           <div className="hover:text-red-500">Home</div>
         </Link>
