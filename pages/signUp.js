@@ -5,32 +5,35 @@ import Link from "next/link"; // Next.js module for client-side navigation
 export default function signUp() {
   return (
     <div>
-      <h1>Sign In</h1> // Heading element displaying "Sign In"
+      <h1 text>Sign Up</h1>
+      <br />
+      <br />
       <form action="#" method="post">
         {" "}
-        // Form element with an action and method attribute
-        <label htmlFor="username">Username:</label> // Label for the username
-        input field
-        <input type="text" id="username" name="username" /> // Text input field
-        for the username
-        <br /> // Line break element
-        <br /> // Line break element
-        <label htmlFor="firstName">First Name:</label> // Label for the first
-        name input field
-        <input type="text" id="username" name="username" /> // Text input field
-        for the first name
-        <br /> // Line break element
-        <br /> // Line break element
-        <label htmlFor="password">Password:</label> // Label for the password
-        input field
-        <input type="password" id="password" name="password" /> // Password
-        input field
-        <br /> // Line break element
-        <br /> // Line break element
-        <input type="submit" value="Sign In" /> // Submit button for the form
+        <label htmlFor="username">Username: </label>
+        <input type="text" id="username" name="username" />
+        <br />
+        <br />
+        <label htmlFor="firstName">First Name: </label>
+        <input type="text" id="username" name="username" />
+        <br />
+        <br />
+        <label htmlFor="lastName">Last Name: </label>
+        <input type="text" id="username" name="username" />
+        <br />
+        <br />
+        <label htmlFor="email">Email: </label>
+        <input type="email" id="email" name="email" />
+        <br />
+        <br />
+        <label htmlFor="zipCode">Zip Code: </label>
+        <input type="text" id="username" name="username" />
+        <br />
+        <br />
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" name="password" />
       </form>
-      <p></p> // Empty paragraph element
+      <p></p>
     </div>
   );
 }
-
